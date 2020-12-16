@@ -13,8 +13,8 @@ TRICHE=0
 ;faire des apocalypse differentes
 version_du_jeu EQU 00110000B ;10110000B
 nombre_de_vbl_avant_le_droit_de_poser_bombe2 EQU 60*2
-invisibilite_totale EQU 100 ;nombre de r‚sistance apres un choc.
-invinsibilite_bonus equ 750 ;nombre vbl de m‚gaforce apres manger bonus...
+invisibilite_totale EQU 100 ;nombre de râ€šsistance apres un choc.
+invinsibilite_bonus equ 750 ;nombre vbl de mâ€šgaforce apres manger bonus...
 
 duree_match EQU 001000000000B  ;2 minutes
 ;duree_match EQU 111000000000B  ;2 minutes
@@ -28,18 +28,18 @@ duree_match5 EQU 000100110000B ;1 minutes 30
 
 ;010011B  ;001100000000B
 time_bouboule equ 5 ;temps pour rotation boules menu
-pic_max equ 500 ;dur‚e attente sur gfx de zaac
+pic_max equ 500 ;durâ€še attente sur gfx de zaac
 taille_exe_gonfle EQU 0255442
 duree_conta EQU 0800 ;nombre de vbl pour une contamination.
 
 
-duree_draw2 EQU 500 ;dur‚e du draw game
-duree_med2 EQU  1200 ;dur‚e du med cere ;10 secondes...
-duree_vic2 EQU  1200 ;dur‚e du vic cere
+duree_draw2 EQU 500 ;durâ€še du draw game
+duree_med2 EQU  1200 ;durâ€še du med cere ;10 secondes...
+duree_vic2 EQU  1200 ;durâ€še du vic cere
 attente_avant_draw2 equ 100
 attente_avant_med2 equ 100
 temps_re_menu equ 10
-r‚sistance_au_debut_pour_un_dyna equ   0
+râ€šsistance_au_debut_pour_un_dyna equ   0
 ;----- pour les joueurs...
 info1 equ 1
 info2 equ 1
@@ -47,9 +47,9 @@ info3 equ 210
 info4 equ 3
 ;1,2,3 (normal),4:double...
 
-;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+;Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
 ; PMODE/W Assembly Example File #1
-;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+;Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
 .386p
 
 ;includelib c:\tasm\lib\import32.lib
@@ -95,11 +95,11 @@ ENDM
         include ipx.inc
 
 
-;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+;Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
 ; CODE
-;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+;Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
 
-;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+;Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°
 ; Entry To ASM Code (_main)
 ; In:
 ;   CS - Code Selector    Base: 00000000h - Limit: 4G
@@ -113,7 +113,7 @@ ENDM
 ;   Interrupt Flag - ?
 ;
 ;   All Other Registers Are Undefined!
-;°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+;Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°
 _main:
         sti                             ; Set The Interrupt Flag
         cld                             ; Clear The Direction Flag
@@ -217,7 +217,7 @@ mov bp,[setup_viseur2_offset+ebx]
         ;mov ax,4c00h                    ; AH=4Ch - Exit To DOS
         ;int 21h                         ; DOS INT 21h
 
-include memoire.inc ;reserve la memoire pour les donn‚es --> selector: FS
+include memoire.inc ;reserve la memoire pour les donnâ€šes --> selector: FS
                     ;segment video: selector: ES
 
 ;        mov ax,4c00h                    ; AH=4Ch - Exit To DOS
@@ -318,11 +318,11 @@ cmp [assez_de_memoire],1
 ;pop es
 ;
 ;lea esi,pal_pic2 ;;;rene
-;lea edi,pal_affich‚e
+;lea edi,pal_affichâ€še
 ;mov ecx,768
 ;rep movsb
-;pal          db  768 dup (?)  ;pal  de l'‚mulateur.
-;pal_affich‚e db 768 dup (0)   ;pal k'on affiche...
+;pal          db  768 dup (?)  ;pal  de l'â€šmulateur.
+;pal_affichâ€še db 768 dup (0)   ;pal k'on affiche...
 ;popall
 ;mov esi,1966080+64000*21
 ;call copie_page
@@ -340,7 +340,7 @@ call dyna_net ;serra fait si ipx found
 
 
 
-cmp dword ptr [kezax],2 ;special.. en cas de brebie ‚gar‚e.
+cmp dword ptr [kezax],2 ;special.. en cas de brebie â€šgarâ€še.
 je nouvelle_manche3
 
 hoooooooop:
@@ -373,8 +373,8 @@ call gooroo
 return_presse demande_partie_slave 1
 call menu_intelligence
 call menu_action ;pour action replay
-get_all_infos3         ; r‚cupere les touches pour chaque joueur et pour
-                       ; tous les diff‚rents ordinateurs.
+get_all_infos3         ; râ€šcupere les touches pour chaque joueur et pour
+                       ; tous les diffâ€šrents ordinateurs.
 
 mov on_les_dans_le_menu,1
 call master_net
@@ -450,7 +450,7 @@ call play_fx
 
 ;----- gestion des joeurs locaux.
 
-call controle    ;pr‚pare le packet qu'on va transmettre en informant
+call controle    ;prâ€špare le packet qu'on va transmettre en informant
                  ;les touches ke l'on presse actuellement
 
 ;*************************** MASTER *******************************
@@ -492,14 +492,14 @@ jne retertdgrfgd
 
 cmp byte ptr [sortie],1 ;eSC.
 jne retertdgrfgd
-;on est master.. et echap est appuy‚...
+;on est master.. et echap est appuyâ€š...
 ;****************** SORTIE... uniquement pour le master *********************
 
 mov byte ptr [ordre2],'M'  ;donne ordre de sortie
 jmp retertdgrfgd
 
-; r‚cupere les touches pour chaque joueur et pour
-                           ; tous les diff‚rents ordinateurs.
+; râ€šcupere les touches pour chaque joueur et pour
+                           ; tous les diffâ€šrents ordinateurs.
 ;call master1               ; comme ca... les autres vont recup ordre2..
 ;jmp hoooooooop
 
@@ -594,7 +594,7 @@ call affichage_stats
 ;pop  es
 ;
 ;xor al,al
-;lea edi,pal_affich‚e
+;lea edi,pal_affichâ€še
 ;mov cx,768
 ;rep stosb
 ;call affpal
@@ -625,7 +625,7 @@ call affichage_stats
 ;mov bx,768
 ;xor al,al
 ;lea esi,pal_txt_debut
-;lea edi,pal_affich‚e
+;lea edi,pal_affichâ€še
 ;oohiu:
 ;;lodsb
 ;cmp al,[edi]
@@ -717,7 +717,7 @@ jmp rtertertyeertrteertterertertterertterert2
 ;
 ;;load_pcx proc near ; ecx: offset dans le fichier.
 ;;                   ; edx: offset nom du fichier
-;;                   ; edi: viseur dans donn‚es ou ca serra copi‚ (ax:)
+;;                   ; edi: viseur dans donnâ€šes ou ca serra copiâ€š (ax:)
 ;;                   ; ebx: nombre de pixels dans le pcx
 ;;
 ;;pushad
@@ -794,7 +794,7 @@ reterertertert:
 
 ;,return_presseque_master  ordre2 '%'
 
-;--- pour pas ke le master kitte de suite kan on sort d'un draw game forc‚
+;--- pour pas ke le master kitte de suite kan on sort d'un draw game forcâ€š
 
 cmp [duree_draw],450 ;pas tout de suite kan meme...
 ja ertetrtrkjjklmkjlmetkjlmdikgrhrfhgrrethghkgh
@@ -809,8 +809,8 @@ touche_presse ordre2 '%' ;saute au menu...
 rerteertertertert3r0:
 
 call compact
-get_all_infos2         ; r‚cupere les touches pour chaque joueur et pour
-;                       ; tous les diff‚rents ordinateurs.
+get_all_infos2         ; râ€šcupere les touches pour chaque joueur et pour
+;                       ; tous les diffâ€šrents ordinateurs.
 ret
 trtyrtyrtyrtyrtyterterertrteert:
 ;---------------------------------------------------------------------------
@@ -821,18 +821,18 @@ jne terterertrteert
 call gestion_jeu
 ;----affichage jeu -------------------
 
-cmp byte ptr [ordre2],'Z' ;uniqUEMENT si on a quitt‚ le jeu en fait...
+cmp byte ptr [ordre2],'Z' ;uniqUEMENT si on a quittâ€š le jeu en fait...
 je  meeeeeed
 
 call compact
-get_all_infos2         ; r‚cupere les touches pour chaque joueur et pour
-                       ; tous les diff‚rents ordinateurs.
-                       ; si ca n'a pas chang‚...
-                       ; l'ordre peut avoir chang‚ mais seulement a la fin...
+get_all_infos2         ; râ€šcupere les touches pour chaque joueur et pour
+                       ; tous les diffâ€šrents ordinateurs.
+                       ; si ca n'a pas changâ€š...
+                       ; l'ordre peut avoir changâ€š mais seulement a la fin...
 
 call rec_play_touches  ;enregistre/joue les touches (pour le REPLAY...)
 
-cmp byte ptr [ordre2],'' ;uniqUEMENT si on a pas quitt‚ le jeu en fait...
+cmp byte ptr [ordre2],'' ;uniqUEMENT si on a pas quittâ€š le jeu en fait...
 jne yttyutyutyutyutyutyutyutyutyuyuttyu
 
 ;*************** affichage *************************************************
@@ -840,7 +840,7 @@ cmp byte ptr [assez_de_memoire],1
 je retetrterterertertrteertertertert
 ;master db 0 ; 0 = OUI
 ;            ; 1 = NON
-;----- affichage de l'‚cran local. l'ancien ecran...
+;----- affichage de l'â€šcran local. l'ancien ecran...
 call copie_le_fond
 call affiche_sprites
 call aff_page2
@@ -902,10 +902,10 @@ touche_presse ordre2 'M' ;saute au menu...
 rerteertertertert:
 ;------------------------------
 call compact
-get_all_infos2         ; r‚cupere les touches pour chaque joueur et pour
-                       ; tous les diff‚rents ordinateurs.
-                       ; si ca n'a pas chang‚...
-                       ; l'ordre peut avoir chang‚ mais seulement a la fin...
+get_all_infos2         ; râ€šcupere les touches pour chaque joueur et pour
+                       ; tous les diffâ€šrents ordinateurs.
+                       ; si ca n'a pas changâ€š...
+                       ; l'ordre peut avoir changâ€š mais seulement a la fin...
 ret
 etrertertrtertertyerterttrtyrtyrtyrtyrtyterterertrteert:
 ;-----------------------------------------------------------------------------
@@ -972,7 +972,7 @@ touche_presse ordre2 '%'
 okokokokokokok345345345:
 ;-----------------------------------
 
-;sauf si on aurait gagn‚...
+;sauf si on aurait gagnâ€š...
 cmp [ordre2],'%'
 jne iertrtrterteert
 xor ebx,ebx
@@ -993,8 +993,8 @@ rtyerterttrtyrtyrtyrtyrtyterterertrteertrtrtrtrtyyrtyooooooooooooo:
 
 
 call compact
-get_all_infos2         ; r‚cupere les touches pour chaque joueur et pour
-                       ; tous les diff‚rents ordinateurs.
+get_all_infos2         ; râ€šcupere les touches pour chaque joueur et pour
+                       ; tous les diffâ€šrents ordinateurs.
 ret
 ;=================================================
 endp
@@ -1055,7 +1055,7 @@ mov edi,offset first_time2+1
 xor cl,cl
 xor bl,bl
 irmerciaurevoir:
-cmp dword ptr [edi],'ØÒ‹'
+cmp dword ptr [edi],'Ã˜Ã’â€¹'
 je iedeja_fait
 ;----------
 mov al,[edi] ;2
@@ -1271,7 +1271,7 @@ inc [packets_jeu_envoyes]
 ;                int 21h
 ;eretetrterterertertrteertertertertzeu:
 
-;pret pour r‚‚couter...
+;pret pour râ€šâ€šcouter...
 ;ecoute2 ecb1 packed_data header_ecoute taille_bloc_the_total socket_jeu
 
 
@@ -1285,7 +1285,7 @@ jne reertertertertt
 ;****************************************************************************
 ;,cmp [premier_affichage],0 ;on ne doit pas faire le premier affichage
 ;,                          ;en mode slave et master dans le jeu,
-;                          ;car ya pas encore eu de r‚flexion de faite...
+;                          ;car ya pas encore eu de râ€šflexion de faite...
 ;je affiche_pas
 
 call copie_le_fond
@@ -1321,7 +1321,7 @@ call copie_le_fond_draw
 dec [duree_draw]
 reertertertert:
 ;----------------------------------------------------
-cmp [ordre2],'Z'                    ; m‚daille distribution
+cmp [ordre2],'Z'                    ; mâ€šdaille distribution
 jne ureertertertert
 ;--- juste pour la palette pour savoir si c le debut.
 cmp [duree_med],duree_med2
@@ -1473,7 +1473,7 @@ rep movsd
 mov esi,offset message1
 mov ecx,32
 rep movsd
-lea edi,control_joueur ;fait correspondre … cpu pour affichage des noms
+lea edi,control_joueur ;fait correspondre â€¦ cpu pour affichage des noms
 mov eax,64*8
 mov ecx,8
 rep stosd
@@ -1583,9 +1583,9 @@ endp
 _TEXT   ends
 
 _DATA   segment use32 dword public 'DATA'
-;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+;Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
 ; DATA
-;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+;Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
 
 
 
@@ -1802,7 +1802,7 @@ nuage_sympa dd 296+120*320 ,0,508,  64+16*320,1B
  arbre dd 0
 viseur_couleur dd 0
 last_voice dd 0
-           ;derniere voix utilis‚e (*2)
+           ;derniere voix utilisâ€še (*2)
 
                              ;3 affiche tout le monde en mechant
 monstro dd 0 ; monstromanie; 0:non 1:montromanie gros montre
@@ -1851,7 +1851,7 @@ dd offset mess_frd, 32
 
 max_lost dd 100 ;25 ;10 ;100         ; 15 ;connection lost max attente.... pour slave
 max_lost_master dd 20 ;20  ;2 ;connection lost max attente.... pour le master
-max_lost_master2 dd 20 ;80 ;5 ;attente accus‚ de reception...
+max_lost_master2 dd 20 ;80 ;5 ;attente accusâ€š de reception...
 
 new_lost dd 0
 
@@ -2208,7 +2208,7 @@ vertg  dw       0+168+26*320,     24+168+26*320,     0+168+26*320,     24*2+168+
 ;       dw nb_dyna dup (100) ;y du dynablaster
 ;       dw nb_dyna dup (24*10)   ;offset source du dynablaster (dans buffer2)
 
-compteur_nuage dd 0 ;utilis‚ aussi pour les anims du nivo foot
+compteur_nuage dd 0 ;utilisâ€š aussi pour les anims du nivo foot
 changementZZ  dd 0
 changementZZ2 dd time_bouboule
 changement dd 0
@@ -2234,7 +2234,7 @@ truc  db 32*13 dup (?)
 ; 2: dur cassable
 ; 3,4,5,6,7,8,9,10 piece en destruction (mettre 3 pour la detruire...)
         ;bombes !!!!
-;11: piece dure pour la fin du jeu. tomb‚e quoi...
+;11: piece dure pour la fin du jeu. tombâ€še quoi...
 truc2   db 32*13 dup (?)
 ;db 0,0,0,0,0,0,00,0,0,0,0,0,0,0,0,0,0,0,0,13 dup (0)
 ;        db 0,0,0,0,0,0,00,0,0,0,0,0,0,0,0,0,0,0,0,13 dup (0)
@@ -2295,7 +2295,7 @@ central_b dw 320*46+16*3,320*46+16*2,320*46+16*1,320*46+16*0,320*46+16*1,320*46+
 ;***************** CENTRAL **************************************
 ;on ecris ici uniquement quand on recoit un packet
 
-;FLECHES appuy‚e pour chacun des dyna sur tous les ordinateur
+;FLECHES appuyâ€še pour chacun des dyna sur tous les ordinateur
 touches dd nb_dyna dup (?)
                       ;0= face        bas.
                       ;8= droite      droite
@@ -2307,13 +2307,13 @@ avance  dd nb_dyna dup (?)
 avance2  dd 8 dup (?) ;15,60,7,25,13,2,79,33 compte a rebourd avant autre action
 touches_save dd nb_dyna dup (?) ;last successfull touches !!!!
 
-;action, touches d'action appuy‚s pour chacun des joeurs...
+;action, touches d'action appuyâ€šs pour chacun des joeurs...
 
 ACTION db nb_dyna dup (?,?,?,?)
 
 ;touches action 1 puis touche action 2...
-;0=non appuy‚e
-;1=passablement activ‚
+;0=non appuyâ€še
+;1=passablement activâ€š
 
 vie dd 8 dup (?)
 ;1,1,1,1,1,1,1,1
@@ -2340,7 +2340,7 @@ ipx_ dd 1 ;1 ;1:oui_ par default... (indique teste serra fait...)
 
 
 
-;viseur pour on place la premiere m‚daille pour chacun des 8 joueurs.
+;viseur pour on place la premiere mâ€šdaille pour chacun des 8 joueurs.
 
 viseur_victory dd 44+28*320,44+70*320 ;blanc
                dd 205+28*320,205+70*320  ;rouge
@@ -2371,7 +2371,7 @@ dd 85+(61+14)*320,85+(129+14)*320
 dd 85+(61+21)*320,85+(129+21)*320
 
 
-;offset pour le sprite m‚daille...
+;offset pour le sprite mâ€šdaille...
 
 offset_medaille dw 23*0,23*1,23*2,23*3,23*4,23*5,23*6,23*7,23*8,23*9,23*10,23*11,23*12
                 dw 23*320+23*0,23*320+23*1,23*320+23*2
@@ -2401,7 +2401,7 @@ random_place  dd 5*2,2*2,1*2,3*2,7*2,6*2,0*2,4*2   ;0
 
 
 last_bomb dd 8 dup (?)
-;dernier offset dans truc ou le dyna a ‚t‚...
+;dernier offset dans truc ou le dyna a â€štâ€š...
 
 infojoueur dd offset j1,offset j2,offset j3,offset j4,offset j5,offset j6,offset j7,offset j8
 
@@ -2466,7 +2466,7 @@ vitesse_monstre dd 8 dup (?) ;vitesse de dehanbulation du monstre (gaucge_droite
 tribombe2       dd 8 dup (?) ; indique depuis combien de temps le dyna
                              ; a relache sa touche action 1
 tribombe        dd 8 dup (?)
-invinsible      dd 8 dup (?) ;invincibilit‚. nombre de vbl restant ... d‚cr‚ment‚e... 0= none...
+invinsible      dd 8 dup (?) ;invincibilitâ€š. nombre de vbl restant ... dâ€šcrâ€šmentâ€še... 0= none...
                              ;si = 0, mortel.
 blocage         dd 8 dup (?) ;nombre de vbl bloke
                              ;si = 0, bouge.
@@ -2492,16 +2492,16 @@ nb_unite_donnee4 EQU 9
 donnee4 db 8*(nb_unite_donnee4) dup (0) ;source DD=666 rien afficher il est mort.
 ;si ordre2=''
 ; 8x source DD, destination dw pour chaque dyna..., db: nombre de ligne du dyna
-; (serra tri‚ … l'affichage par chaque machine.mettra dest a ffffh)
+; (serra triâ€š â€¦ l'affichage par chaque machine.mettra dest a ffffh)
 ;si ordre2='Z'
 ;       copie de "victoires dd 8 dup (?)" ;8*4=32
 ;       et 1 dd avec le offset du dernier ki a eu une victoire... ;+4=36
 ;          (latest_victory)
 ;       puis les  4 dd: des sources du dyna de face (gauche/droite) ki ;+16=52
-;       a gagn‚...
+;       a gagnâ€š...
 ;       puis 1 db: le nombre de lignes k'il fait... +1=53
 ;       puis 1 db: nombre de colonnes k'il fait     +1=54
-;       puis 1 db: divers infos... bit0: clignotement ? (pour vuln‚ralit‚)
+;       puis 1 db: divers infos... bit0: clignotement ? (pour vulnâ€šralitâ€š)
 ;.............................................................................
 viseur_liste_terrain dd 0
 
@@ -2515,15 +2515,15 @@ action_replay db 0 ; 0 = RIEN
 nombre_de_monstres dd ?
 
 ;je sqis pu pourkoi c ici, enfin men tqppe les burnes
-nombre_de_vbl_avant_le_droit_de_poser_bombe dd ? ;pour d‚but de partie...
+nombre_de_vbl_avant_le_droit_de_poser_bombe dd ? ;pour dâ€šbut de partie...
 
 ordre2         db ?         ;ordre 2...
                             ;'' dans le jeu...
                             ;'D' Draw Game...
                             ;'M' saute au menu
                             ;'%' indique nouvelle manche
-                            ;'Z' m‚daille c‚remony
-                            ;'V' victoire supreme c‚remony
+                            ;'Z' mâ€šdaille câ€šremony
+                            ;'V' victoire supreme câ€šremony
 speed_raster db 0  ;0=non !!! ;oui = oui  TURBO MODE on/off
 detail      db 0   ;
 mechant       db 0          ;0 ne fait rien...
@@ -2553,7 +2553,7 @@ ombres      dw 8 dup (0)
 ;---
 briques dw 1+19*13*2 dup (?)  ;nombre de brique, source de la brique, destination
                               ;dans buffer video
-                              ;si on est dans 'Z' m‚daille c‚remony
+                              ;si on est dans 'Z' mâ€šdaille câ€šremony
                               ;les noms de chaque joueur. 8x4 octets.
                               ;+ 1 db= faut afficher la brike ki clignote ou pas???
 bombes  dw 1+19*13*2 dup (?)  ; pareil pour les bombes & explosion & bonus
@@ -2589,9 +2589,9 @@ control_joueur2 dd -64,-64+7,-64+7*2,-64+7*3,-64+7*4,-64+7*5,-64+7*6,-64+7*7
 
 name_joueur     dd 8 dup (?) ;pour dans le menu...
 ;0: pas encore inscrit.
-;1: r‚cupere la premiere lettre
-;2: r‚cupere la premiere lettre
-;3: r‚cupere la troisieme lettre
+;1: râ€šcupere la premiere lettre
+;2: râ€šcupere la premiere lettre
+;3: râ€šcupere la troisieme lettre
 ;4: finis... attend de jouer
 
 temps_joueur   dd 8 dup (?) ;temps d'attente avant validation
@@ -2604,21 +2604,21 @@ nb_max_ordy EQU 10 ;dans la liste...
 
 liste_adresse   db nb_max_ordy*16 dup (0)
 
-;adresse des autres ordinateurs connect‚s... 10 premiers octets...
-;12 premiers octets: adresse, puis ACTIVIt‚ 'okok' ca roule
-;                                           'dead' plus de r‚ponse...
+;adresse des autres ordinateurs connectâ€šs... 10 premiers octets...
+;12 premiers octets: adresse, puis ACTIVItâ€š 'okok' ca roule
+;                                           'dead' plus de râ€šponse...
 
 nb_ordy_connected dd 0 ; nombre d'otres ordy...
 last_packet_size dd 100
 adresse_master db 12 dup (0)
 ;00,00,00,00,00,040h,05h,2ah,3dh,8fh,40h,02h
-;00,00,00,00,00,0c0h,0a8h,40h,06h,03h,40h,02h ; ordy num‚ro 1
+;00,00,00,00,00,0c0h,0a8h,40h,06h,03h,40h,02h ; ordy numâ€šro 1
 
 ;cultura MACRO d
 ;ENDM
 
 
-;----- les offset pour le nick de chaque pseudo et le mˆme ke pour les
+;----- les offset pour le nick de chaque pseudo et le mË†me ke pour les
 ;packet des touches...
 ;cultura nick_t
 ;        cultura
@@ -2726,11 +2726,11 @@ total_t db 0,0,0,0     ,0,0   ;1er joeur d'un ordy.
         db 14 dup (0)         ;pour faire 64 octets...
 ;***************** variables IPX *********************************************
 
-;model des packets recus par le master.. (envoy‚ par slave.)
+;model des packets recus par le master.. (envoyâ€š par slave.)
 
 ;----------------------------------------------------------------------------
 
-;cette zone m‚moire est d'abord utilise‚ par le local (master) en transmition
+;cette zone mâ€šmoire est d'abord utiliseâ€š par le local (master) en transmition
 ;directe a partir des touches puis par les autres ordy via communtication.
 
 donnee2 db 0,0,0,0     ,0,0,0   ;1er joeur d'un ordy.
@@ -2746,16 +2746,16 @@ donnee2 db 0,0,0,0     ,0,0,0   ;1er joeur d'un ordy.
 
 touches_size EQU 7*8+2+1
 
-;offset 0         =1 si la fleche bas est press‚/               j1
-;       4         =1 si la fleche droite est press‚             j1
-;       8         =1 si la fleche gauche est press‚             j1
-;       12        =1 si la fleche haut est press‚2              j1
+;offset 0         =1 si la fleche bas est pressâ€š/               j1
+;       4         =1 si la fleche droite est pressâ€š             j1
+;       8         =1 si la fleche gauche est pressâ€š             j1
+;       12        =1 si la fleche haut est pressâ€š2              j1
 ;       16        =1 bouton 1                                   j1
 ;       20        =1 bouton 2                                   j1
 
 first_time2 db 0
 include texte.inc
-db '‹ÒØ'
+db 'â€¹Ã’Ã˜'
 
 
 ;mov dl,''
@@ -2785,7 +2785,7 @@ nb_dyna equ 8
 packet_data_size equ 576-packet_header_size
 packet_header_size equ 30
 
-; ecb pour l'‚coute.
+; ecb pour l'â€šcoute.
 ecouteur MACRO ecb1,header_ecoute
 ecb1 dd  0   ;    0       link address
      dd  0   ;    4       ESR address (NULL if unused)
@@ -2799,15 +2799,15 @@ ecb1 dd  0   ;    0       link address
      dw  0   ;    40      fragment size 1
      dd  0   ;    42      fragment address 2
      dw  0   ;    46      fragment size 2
-;header pour l'‚coute.
+;header pour l'â€šcoute.
 header_ecoute  dw 0   ; 0 checksum
  dw 0   ; 2 length;
  db 0   ; 4 tc
  db 0   ; 5 type
         ; 6 dest
  db 4 dup (0) ;netadd         ;REMPLIS AUTOMATIQUEMENT QUAND ON RECOIT
- db 6 dup (0) ;nodeadd        ;avec l'adresse a laquelle le packet a ‚t‚
- dw 0           ;sockette...  ;envoy‚. (ou la notre ou FFFF -> toutes.)
+ db 6 dup (0) ;nodeadd        ;avec l'adresse a laquelle le packet a â€štâ€š
+ dw 0           ;sockette...  ;envoyâ€š. (ou la notre ou FFFF -> toutes.)
         ; 18source
  db 4 dup (0) ;netadd         ;REMPLIS AUTOMATIQUEMENT QUAND ON RECOIT
  db 6 dup (0) ;nodeadd        ;contient l'adresse d'ou provient le message.
@@ -2860,7 +2860,7 @@ ENDM
 envoyer ecb2 header_envois
 envoyer ecb4 header_envois4
 
-donnee3 db  0;pour envoyer donn‚e. systeme.
+donnee3 db  0;pour envoyer donnâ€še. systeme.
 
 envoye_data db 1500 dup (0)
 ;******************** fin variables IPX **************************************
@@ -3066,7 +3066,7 @@ ooo34  dd 512000,512000,512000,512000,512000,512000,512000,512000 ;source bloque
        dw 32,32,32,32,32,32,32,32 ;nombre de colonnes. ;8*12
        dd -9*320-4,-9*320-4,-9*320-4,-9*320-4,-9*320-4,-9*320-4,-9*320-4,-9*320-4 ;adder di ;8*16
        dd offset grosbleu,offset grosbleu,offset grosbleu,offset grosbleu,offset grosbleu,offset grosbleu,offset grosbleu,offset grosbleu
-       dd 8 dup (2)   ;r‚sistance aux bobos... (par d‚fault: pour monstre)
+       dd 8 dup (2)   ;râ€šsistance aux bobos... (par dâ€šfault: pour monstre)
 ;pour les joueurs...
        dd info1,info2,info3,info4,0
 ;premier dd: nombre de bombes que le joeur peut encore mettre.
@@ -3094,7 +3094,7 @@ donnee_foot dw 52,52 ,244,244,     116,116,  180,180  ;x du dynablaster ;8*0
        dw 8 dup (16) ;nombre de colonnes. ;8*12
        dd 8 dup (4+320*4)
        dd 8 dup (offset machine)
-       dd 8 dup (0)   ;r‚sistance aux bobos... (par d‚fault: pour monstre)
+       dd 8 dup (0)   ;râ€šsistance aux bobos... (par dâ€šfault: pour monstre)
 ;pour les joueurs...
        dd info1,info2,info3,info4,0
 ;premier dd: nombre de bombes que le joeur peut encore mettre.
@@ -3121,7 +3121,7 @@ donnee_soccer dw 52,52,244,244,100,100,196,196  ;x du dynablaster ;8*0
        dw 4 dup (32,38) ;26,26,16,23,26,32,17,38 ;nombre de colonnes. ;8*12
        dd 4 dup (-9*320-4,-9*320-7) ;adder di ;8*16
        dd 4 dup (offset grosbleu,offset escargot)
-       dd 2,2,2,2,2,2,2,2   ;r‚sistance aux bobos... (par d‚fault: pour monstre)
+       dd 2,2,2,2,2,2,2,2   ;râ€šsistance aux bobos... (par dâ€šfault: pour monstre)
        dd info1,info2,info3,info4,0
        dd 1,1,220,3,0,1,1,220,3,0 ;2 premiers montres forcements ecrase!
        ;dd 1,1,220,2,0             ;le oldschool.
@@ -3153,7 +3153,7 @@ donnee_h dw 20,20,276,276,116,116,180,180  ;x du dynablaster ;8*0
        dw 26,26,26,26,26,26,26,26 ;nombre de colonnes. ;8*12
        dd -5*320-1,-5*320-1,-5*320-1,-05*320-1,-05*320-1,-05*320-1,-05*320-1,-05*320-1 ;adder di ;8*16
        dd offset bleu_triste,offset bleu_triste,offset bleu_triste,offset bleu_triste,offset bleu_triste,offset bleu_triste,offset bleu_triste,offset bleu_triste
-       dd 8 dup (1) ;r‚sistance aux bobos... (par d‚fault: pour monstre)
+       dd 8 dup (1) ;râ€šsistance aux bobos... (par dâ€šfault: pour monstre)
        dd info1+7,info2+7,info3,info4,0
        dd 8 dup (1,1,220,3,0)
                 dd 8 dup (200) ;invinsibilite au debut. (""")
@@ -3174,7 +3174,7 @@ donnee_n dw 84 ,84 ,213,213, 20, 20,277,277  ;x du dynablaster ;8*0
        dw 26,26,16,23,26,32,17,38 ;nombre de colonnes. ;8*12
        dd -5*320-1,-5*320-1,4+320*3,320*1,-05*320-1,-9*320-4,4*320+3,-9*320-7 ;adder di ;8*16
        dd offset bleu_triste,offset bleu_triste,offset old_school,offset coca,offset bleu_triste,offset grosbleu,offset petit_jaune,offset escargot
-       dd 1,1,0,1,1,2,0,2   ;r‚sistance aux bobos... (par d‚fault: pour monstre)
+       dd 1,1,0,1,1,2,0,2   ;râ€šsistance aux bobos... (par dâ€šfault: pour monstre)
        dd info1,info2,info3,info4,0
        dd 1,1,220,3,0,1,1,220,3,0 ;2 premiers montres forcements ecrase!
        dd 1,1,220,2,0             ;le oldschool.
@@ -3227,7 +3227,7 @@ donnee_f dw 20,20 ,277,277,116,116,180,180  ;x du dynablaster ;8*0
        dw 38,38,38,38,38,38,38,38 ;nombre de colonnes. ;8*12
        dd -9*320-7,-9*320-7,-9*320-7,-9*320-7,-9*320-7,-9*320-7,-9*320-7,-9*320-7 ;adder di ;8*16
        dd offset escargot,offset escargot,offset escargot,offset escargot,offset escargot,offset escargot,offset escargot,offset escargot
-       dd 8 dup (2)   ;r‚sistance aux bobos... (par d‚fault: pour monstre)
+       dd 8 dup (2)   ;râ€šsistance aux bobos... (par dâ€šfault: pour monstre)
        dd info1,info2,info3,info4,0
        dd 8 dup (1,1,220,2,0) ;monstres vitesse lente (escargots...)
                 dd 8 dup (0) ;invinsibilite au debut. (""")
@@ -3241,7 +3241,7 @@ donnee_f dw 20,20 ,277,277,116,116,180,180  ;x du dynablaster ;8*0
 ;escargot
 ;mov edi,896000+384000+46080+64000 ; 128000  ;307200
 
-;r‚sistance_au_debut_pour_un_dyna equ 0
+;râ€šsistance_au_debut_pour_un_dyna equ 0
 
 donnee_s_neige dw 20,20,277,277-32,116-16-16,116,180+16+16,180  ;x du dynablaster
                 dw 9,169,9,169,41,137,41,137-16-16 ;y du dynablaster
@@ -3251,7 +3251,7 @@ donnee_s_neige dw 20,20,277,277-32,116-16-16,116,180+16+16,180  ;x du dynablaste
                 dw 17,17,17,17,17,17,17,17 ;nombre de colonnes.
                 dd 4*320+3,4*320+3,4*320+3,4*320+3,4*320+3,4*320+3,4*320+3,4*320+3;adder di
                 dd offset petit_jaune,offset petit_jaune,offset petit_jaune,offset petit_jaune,offset petit_jaune,offset petit_jaune,offset petit_jaune,offset petit_jaune
-                dd 8 dup (0)   ;r‚sistance aux bobos... (par d‚fault: pour monstre)
+                dd 8 dup (0)   ;râ€šsistance aux bobos... (par dâ€šfault: pour monstre)
                 dd info1,info2,info3,info4,0
                 dd 8 dup (1,1,220,3,0)
                 dd 8 dup (0) ;invinsibilite au debut. (""")
@@ -3278,13 +3278,13 @@ s_normal dd 576000,640000,576000,640000,576000,640000,576000,640000 ;source bloq
 l_normal dw 23,25,23,25,23,25,23,25 ;nombre de lignes pour un dyna...
 c_normal dw 23,23,23,23,23,23,23,23 ;nombre de colonnes.
 a_normal dd 0,-3*320,0,-3*320,0,-3*320,0,-3*320 ;adder di (pour la girl + grande...)
-r_normal dd 8 dup (r‚sistance_au_debut_pour_un_dyna)
+r_normal dd 8 dup (râ€šsistance_au_debut_pour_un_dyna)
 
 ;             0,0,0,-3*320,-3*320,-3*320,-3*320 ;adder di (pour la girl + grande...)
 
 
-truc_fin db 13*32 dup (?)   ;endroit ou l'on place le compte … rebourd.
-                            ;enfin le nombre de vbl avant le d‚foncage lors
+truc_fin db 13*32 dup (?)   ;endroit ou l'on place le compte â€¦ rebourd.
+                            ;enfin le nombre de vbl avant le dâ€šfoncage lors
          dd ? ;sa vitesse   ; de L'(a)pocalypse.
 ;(a)pocalypse de rechange:
 truc_fin_s   db 000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,13 dup (0)
@@ -3722,7 +3722,7 @@ sors_du_menu_aussitot db 0 ;pour kon kitte le jeu aussitot apres avoir
 team3_sauve          db 0        ;
 
 special_on_a_loadee_nivo db 0
-record_user db 0 ;activ‚ si on a le droit d'enclancher le mode REC/PLAY
+record_user db 0 ;activâ€š si on a le droit d'enclancher le mode REC/PLAY
 
 previentlmesenfants db 0 ;pour slave: affiche messgae fin
 
@@ -3780,10 +3780,10 @@ scrolly   db 6*328 dup (0)
 
 
 last_sucker db 0 ;derniere touche...
-pal          db  768 dup (?)  ;pal  de l'‚mulateur.
-pal_affich‚e db 768 dup (0)   ;pal k'on affiche...
+pal          db  768 dup (?)  ;pal  de l'â€šmulateur.
+pal_affichâ€še db 768 dup (0)   ;pal k'on affiche...
 affiche_pal  db 2             ; 1: vas de la palette au noir (ne plus afficher
-                              ;                               d'‚cran !!!)
+                              ;                               d'â€šcran !!!)
                               ;
                               ; 2: va du noir a la palette
                               ; 0: ne fait rien...
@@ -3873,13 +3873,13 @@ liste_terrain db 1,2,6,4,3,8,5,7,66
 ;31 ;19+128  ;S
 ;22 ;19+128  ;U
 
-jesus db 31,16,20,16,49,'Û'
+jesus db 31,16,20,16,49,'Ã›'
 jesus_mode db TRICHE ;!!!0
-jesus2 db 31,25,18,18,32,'Û'
-jesus3 db 31,38,24,44,'Û'
-jesus4 db 31,38,24,17,'Û'
-jesus5 db 20,24,20,24,'Û'
-;jesus6 db 20,24,16,31,20,18,19,'Û'
+jesus2 db 31,25,18,18,32,'Ã›'
+jesus3 db 31,38,24,44,'Ã›'
+jesus4 db 31,38,24,17,'Ã›'
+jesus5 db 20,24,20,24,'Ã›'
+;jesus6 db 20,24,16,31,20,18,19,'Ã›'
 
 sortie db 0 ;sortie...
 
@@ -3905,19 +3905,19 @@ invite_recu db ? ;indique la version du connecte ki s'est manisfete.
 ;ligne_commande 256 db (?)
 ;                   db '$'
 
-;texte_fin db  'texte integrit‚.',10,13,'$'
+;texte_fin db  'texte integritâ€š.',10,13,'$'
 
 ;include darkyans.inc
 
 correspondance_mode_texte db ' ',2*16
                           db ' ',7*16
                           db ' ',4*16
-                          db '²',2*16+4 ;3 a 10 pice en destruction
-                          db '²',2*16+4 ;3 a 10 pice en destruction
-                          db '±',2*16+4 ;3 a 10 pice en destruction
-                          db '±',2*16+4 ;3 a 10 pice en destruction
-                          db '°',2*16+4 ;3 a 10 pice en destruction
-                          db '°',2*16+4 ;3 a 10 pice en destruction
+                          db 'Â²',2*16+4 ;3 a 10 pice en destruction
+                          db 'Â²',2*16+4 ;3 a 10 pice en destruction
+                          db 'Â±',2*16+4 ;3 a 10 pice en destruction
+                          db 'Â±',2*16+4 ;3 a 10 pice en destruction
+                          db 'Â°',2*16+4 ;3 a 10 pice en destruction
+                          db 'Â°',2*16+4 ;3 a 10 pice en destruction
                           db ' ',2*16+4 ;3 a 10 pice en destruction
 correspondance_mode_texte2 db ' '
                            db 'o'
@@ -3928,9 +3928,9 @@ correspondance_mode_texte2 db ' '
 
 _DATA   ends
 
-;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+;Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
 ; STACK
-;±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+;Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±Â±
 stackseg   segment para stack 'STACK'
         db 1000h dup(?)
 stackseg   ends
