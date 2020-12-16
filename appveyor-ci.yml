@@ -30,4 +30,4 @@ build_script:
 
       cd $DIR
       swift build
-      .build/debug/asm2c p.asm
+      .build/debug/asm2c p.asm Resources
