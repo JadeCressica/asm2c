@@ -11,7 +11,7 @@ environment:
 
 
 artifacts:
-  - path: '**\*libretro.dylib'
+  - path: '**\*asm2c'
   
 
 
