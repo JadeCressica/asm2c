@@ -34,4 +34,4 @@ build_script:
 
 
       cd $DIR
-      swift Package.swift
+      swift build
