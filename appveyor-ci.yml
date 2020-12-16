@@ -1,70 +1,36 @@
-#
-# Extract package to github folder
-#
-# - Make sure to upload archive separately first.
-# - Then run this script next.
-#
+image: ubuntu
 
 
-clone_depth: 500
+clone_depth: 1
 
 
 
 environment:
-
-  GIT_SCRIPT: SiennaSilver
-
-
-  ARCHIVE: asm2c-master.7z
-  CLEAN: no
+  script: .
 
 
-  GIT_LOGIN:
-    secure: qOA9yxm90ZYtTb+LWeLytw==
 
-
+artifacts:
+  - path: '**\*libretro.dylib'
+  
 
 
 build_script:
 
-  - ps: |
-
-      if (${env:GIT_SCRIPT} -Eq $Null) {
-        $env:GIT_SCRIPT = $env:APPVEYOR_REPO_COMMIT_AUTHOR
-      }
+  - sh: |
+      export DIR=$APPVEYOR_BUILD_FOLDER
+      cd $DIR
 
 
-
-      # git reset --hard HEAD~1
-
+      git submodule update --init --recursive
 
 
-      ##################################
+      wget https://swift.org/builds/swift-5.1.3-release/ubuntu1804/swift-5.1.3-RELEASE/swift-5.1.3-RELEASE-ubuntu18.04.tar.gz
+      tar -xvzf swift-5.1.3-RELEASE*
+      export PATH=$DIR/swift-5.1.3-RELEASE-ubuntu18.04:$PATH
+      export PATH=$DIR/swift-5.1.3-RELEASE-ubuntu18.04/usr/bin:$PATH
 
+      cd $DIR/swift-5.1.3-RELEASE-ubuntu18.04
+      swift -version
 
-
-      try {
-        iex ((New-Object System.Net.WebClient).DownloadString("https://github.com/${env:GIT_SCRIPT}/appveyor-git/raw/main/script/script.ps1"))
-
-        iex ((New-Object System.Net.WebClient).DownloadString("${env:GIT_SCRIPT}/login/login.ps1"))
-      }
-
-      catch {
-        throw "$_"
-      }
-
-
-
-      ##########################################
-
-
-      7z x $env:ARCHIVE -aoa
-      del $env:ARCHIVE
-      git add .
-      git commit -m "unpacked"
-
-      git push -f origin HEAD:${env:APPVEYOR_REPO_BRANCH}
-
-
-      echo "`n`n"
-      git log -1
+      swift package.swift
