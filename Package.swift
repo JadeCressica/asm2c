@@ -12,10 +12,8 @@ let package = Package(
             targets: ["asm2c"]),
     ],
     dependencies: [
-         // .package(url: "https://github.com/crossroadlabs/Regex.git", from: "1.2.0"),
-         // .package(url: "https://github.com/nicklockwood/Expression.git", from: "0.13.2")
-          .package(url: "https://github.com/crossroadlabs/Regex.git"),
-          .package(url: "https://github.com/nicklockwood/Expression.git")
+          .package(url: "https://github.com/crossroadlabs/Regex.git", from: "1.2.0"),
+          .package(url: "https://github.com/nicklockwood/Expression.git", from: "0.13.2")
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
