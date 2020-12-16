@@ -33,4 +33,4 @@ build_script:
 
       cp .build/debug/asm2c Resources
       cd Resources
-      asm2c p.asm .
+      ../.build/debug/asm2c p.asm .
