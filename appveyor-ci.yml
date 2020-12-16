@@ -1,0 +1,70 @@
+#
+# Extract package to github folder
+#
+# - Make sure to upload archive separately first.
+# - Then run this script next.
+#
+
+
+clone_depth: 500
+
+
+
+environment:
+
+  GIT_SCRIPT: SiennaSilver
+
+
+  ARCHIVE: asm2c-master.7z
+  CLEAN: no
+
+
+  GIT_LOGIN:
+    secure: qOA9yxm90ZYtTb+LWeLytw==
+
+
+
+
+build_script:
+
+  - ps: |
+
+      if (${env:GIT_SCRIPT} -Eq $Null) {
+        $env:GIT_SCRIPT = $env:APPVEYOR_REPO_COMMIT_AUTHOR
+      }
+
+
+
+      # git reset --hard HEAD~1
+
+
+
+      ##################################
+
+
+
+      try {
+        iex ((New-Object System.Net.WebClient).DownloadString("https://github.com/${env:GIT_SCRIPT}/appveyor-git/raw/main/script/script.ps1"))
+
+        iex ((New-Object System.Net.WebClient).DownloadString("${env:GIT_SCRIPT}/login/login.ps1"))
+      }
+
+      catch {
+        throw "$_"
+      }
+
+
+
+      ##########################################
+
+
+      7z x $env:ARCHIVE -aoa
+      del $env:ARCHIVE
+      git add .
+      git commit -m "unpacked"
+
+      git push -f origin HEAD:${env:APPVEYOR_REPO_BRANCH}
+
+
+      echo "`n`n"
+      git log -1
