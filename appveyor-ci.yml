@@ -31,6 +31,7 @@ build_script:
       cd $DIR
       swift build
 
-      cp .build/debug/asm2c Resources
-      cd Resources
-      ../.build/debug/asm2c p.asm .
+      # cp .build/debug/asm2c Resources
+      # cd Resources
+      # ../.build/debug/asm2c p.asm .
+      .build/debug/asm2c asmTests/addsub.asm Resources
