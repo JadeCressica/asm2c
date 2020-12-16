@@ -30,4 +30,4 @@ build_script:
 
       cd $DIR
       swift build
-      asm2c p.asm
+      # asm2c p.asm
