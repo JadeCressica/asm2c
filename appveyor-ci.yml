@@ -12,6 +12,8 @@ environment:
 
 artifacts:
   - path: '**\*asm2c'
+  - path: '**\*.c'
+  - path: '**\*.h'
   
 
 
@@ -31,7 +33,4 @@ build_script:
       cd $DIR
       swift build
 
-      # cp .build/debug/asm2c Resources
-      # cd Resources
-      # ../.build/debug/asm2c p.asm .
-      .build/debug/asm2c $DIR/asmTests/addsub.asm $DIR/Resources
+      .build/debug/asm2c $DIR/P.asm $DIR/Resources
