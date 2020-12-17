@@ -53,7 +53,7 @@ info4 equ 3
 .386p
 
 ;includelib c:\tasm\lib\import32.lib
-include ss\proc-pm.inc ;SOUNDSYSTEM.
+include ss/proc-pm.inc ;SOUNDSYSTEM.
 ;
 ;extrn     ExitProcess     : PROC     ;procedure to shut down a process
 ;
@@ -89,8 +89,8 @@ POP EAX EDX
 ENDM
 
         include ipxmacro.inc
-        include divers\aff-pm.inc
-        include divers\couleur.inc
+        include divers/aff-pm.inc
+        include divers/couleur.inc
         include bomb.inc
         include ipx.inc
 
@@ -3009,7 +3009,7 @@ dd -1
 ;lune1.mrb          64000                    -55
 ;lune2.mrb          64000                    -56
 
-include ss\DATA_RMD.INC ;SOUNDSYSTEM
+include ss/DATA_RMD.INC ;SOUNDSYSTEM
 
 ;*************** save des nivos *****************
 
