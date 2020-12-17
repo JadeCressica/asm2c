@@ -84,9 +84,9 @@ add ebx,taille_dune_info_bombe
 jmp ttyrrtyrtyrtyrtytyrrtyrtyyrtrty
 erertertrteterert:
 
-mov edx,dword ptr [edi+4]        ;r‚cupere la puissance de la bombe dans
+mov edx,dword ptr [edi+4]        ;râ€šcupere la puissance de la bombe dans
                                  ;l'info du joueur...
-mov ecx,dword ptr [edi+8]        ;r‚cupere la taille de la meiche de la
+mov ecx,dword ptr [edi+8]        ;râ€šcupere la taille de la meiche de la
                                  ;bombe dans l'info du joueur...
 
 ;mov [nomonster],1
@@ -486,7 +486,7 @@ cmp al,byte ptr [jesus+ebx]
 jne yureertrteertert
 inc ebx
 inc coco
-cmp byte ptr [jesus+ebx],'Û'
+cmp byte ptr [jesus+ebx],'Ã›'
 jne yureertrteertert2
 mov [speed_raster],valeur
 ;jmp yureertrteertert2
@@ -504,7 +504,7 @@ local finito_baby
 local erterdynanormalito
 local passaut2
 cmp [invinsible+ebp],0 ;flamme ? sauf si on est en invinsible apres un coups...
-jne saut                  ;‚vite la mort de justesse...
+jne saut                  ;â€švite la mort de justesse...
 
 cmp [lapipipino+ebp],0 ;lapin ?
 je erterdynanormalito
@@ -531,7 +531,7 @@ call nike_toutes_ses_bombes
 pop ebx
 ;---------------------
 
-;**d‚cr‚mente le nombre de coups k'on peut prendre ***
+;**dâ€šcrâ€šmente le nombre de coups k'on peut prendre ***
 cmp [nombre_de_coups+ebp],0
 je finito_baby
 dec dword ptr  [nombre_de_coups+ebp]
@@ -711,7 +711,7 @@ mov eax,[changement]
 and eax,01111B
 mov al,[hazard_maladie+eax]
 and ax,255
-mov word ptr [maladie+ebp],ax ;ax ;4: touches invers‚e...
+mov word ptr [maladie+ebp],ax ;ax ;4: touches inversâ€še...
                              ;3 : la chiasse...
                              ;2 : maladie de la lenteur...
                              ;1 : maladie du speeD.
@@ -732,7 +732,7 @@ local op
 ;a:panning 0 droite
 ;
 ;last_voice dd 0
-;           ;derniere voix utilis‚e (*2)
+;           ;derniere voix utilisâ€še (*2)
 ;
 ;
 ;0.1.2.3.4.5.6 7
@@ -766,7 +766,7 @@ local op
 ;a:panning 0 droite
 ;
 ;last_voice dd 0
-;           ;derniere voix utilis‚e (*2)
+;           ;derniere voix utilisâ€še (*2)
 ;
 ;
 ;0.1.2.3.4.5.6 7
@@ -800,7 +800,7 @@ local op
 ;a:panning 0 droite
 ;
 ;last_voice dd 0
-;           ;derniere voix utilis‚e (*2)
+;           ;derniere voix utilisâ€še (*2)
 ;
 ;
 ;0.1.2.3.4.5.6 7
@@ -831,7 +831,7 @@ ENDM
 
 
 
-bruit2 MACRO a,b
+bruit2 MACRO a,b,t
 local op
 
 ;a: sample, b:note
@@ -1240,7 +1240,7 @@ bruit3 10 30 BLOW_WHAT2 ;bruit kan 1 lapin saute
 ;                             ;mis a jour par la proc "blanchiment"
 ;pousseur        dd 8 dup (0)
 ;patineur        dd 8 dup (?)
-;invinsible      dd 8 dup (?) ;invincibilit‚. nombre de vbl restant ... d‚cr‚ment‚e... 0= none...
+;invinsible      dd 8 dup (?) ;invincibilitâ€š. nombre de vbl restant ... dâ€šcrâ€šmentâ€še... 0= none...
 
 yertterertertertert:
 ENDM
@@ -1464,7 +1464,7 @@ jmp ferretertrterteetrrteertrterteretrteretertertrteert
 
 reerertterertteretr:
 ;donc il n'y a rien dans truc... c'est vide...
-;3 possibilit‚: vide.. ou une bombe,ou un bonus... visible dans truc 2.
+;3 possibilitâ€š: vide.. ou une bombe,ou un bonus... visible dans truc 2.
 cmp byte ptr [esi],1
 jb  nononononono_rien_pas_de_bombe
 ;1 = bombe... (2,3,4) respirant...
@@ -2316,9 +2316,9 @@ teryrtyrtyuuiyuyu:
 
 mov eax,dword ptr [esi+16]
 test dword ptr [compteur_nuage],eax
-jnz pas_Šcette_fois
+jnz pas_Å cette_fois
 inc dword ptr [esi+4]
-pas_Šcette_fois:
+pas_Å cette_fois:
 
 mov eax,[esi]
 
@@ -2595,7 +2595,7 @@ pushall
 ;mov ebx,320*200 ;307200
 ;mov ax,fs
 
-; (serra tri‚ … l'affichage par chaque machine.mettra dest a 0ffffh)
+; (serra triâ€š â€¦ l'affichage par chaque machine.mettra dest a 0ffffh)
 
 
 
@@ -3258,7 +3258,7 @@ aff_page2 endp
 
 load_pcx proc near ; ecx: offset dans le fichier.
                    ; edx: offset nom du fichier
-                   ; edi: viseur dans donn‚es ou ca serra copi‚ (ax:)
+                   ; edi: viseur dans donnâ€šes ou ca serra copiâ€š (ax:)
                    ; ebx: nombre de pixels dans le pcx
 
 pushad
@@ -3419,7 +3419,7 @@ load_pcx endp
 
 load_raw proc near ; ecx: offset dans le fichier.
                    ; edx: offset nom du fichier
-                   ; edi: viseur dans donn‚es ou ca serra copi‚ (ax:)
+                   ; edi: viseur dans donnâ€šes ou ca serra copiâ€š (ax:)
                    ; ebx: nombre de pixels dans le pcx
 
 pushad
@@ -3455,7 +3455,7 @@ int 21h
  mov ebx,[load_handle]
  mov ah,03fh
  mov ecx,064000
-                   ; edi: viseur dans donn‚es ou ca serra copi‚ (ax:)
+                   ; edi: viseur dans donnâ€šes ou ca serra copiâ€š (ax:)
 push ds
 push fs
 pop  ds
@@ -3486,11 +3486,11 @@ pop  dx cx ebx ds es ax ds
 ret
 charge_encore endp
 
-;pal          db  768 dup (?)  ;pal  de l'‚mulateur.
-;pal_affich‚e db 768 dup (0)   ;pal k'on affiche...
+;pal          db  768 dup (?)  ;pal  de l'â€šmulateur.
+;pal_affichâ€še db 768 dup (0)   ;pal k'on affiche...
 
 ;affiche_pal  db 0             ; 1: vas de la palette au noir (ne plus afficher
-;                              ;                               d'‚cran !!!)
+;                              ;                               d'â€šcran !!!)
 ;                              ;
 ;                              ; 2: va du noir a la palette
 ;                              ; 0: ne fait rien...
@@ -3527,14 +3527,14 @@ cmp [affiche_pal],1
 jne zorrro
 
 ;affiche_pal  db 0             ; 1: vas de la palette au noir (ne plus afficher
-;                              ;                               d'‚cran !!!)
+;                              ;                               d'â€šcran !!!)
 
 ;------------
 xor bp,bp
 mov dx,4
 reeeeee:
 ;mov esi,offset pal
-mov esi,offset pal_affich‚e
+mov esi,offset pal_affichâ€še
 mov cx,768
 rchanger:
 cmp byte ptr [esi],0
@@ -3618,7 +3618,7 @@ jne ereetrtrtrtrteeete
 lea edi,pal_pic2
 ereetrtrtrtrteeete:
 
-mov esi,offset pal_affich‚e
+mov esi,offset pal_affichâ€še
 mov cx,768
 yrchanger:
 mov al,byte ptr [edi]
@@ -3669,7 +3669,7 @@ endp
 affpal      proc near
     pushad
 
-         mov   esi,offset pal_affich‚e
+         mov   esi,offset pal_affichâ€še
 	 mov   dx,3c8h
 	 XOR   al,al
 	 out   dx,al
@@ -3687,7 +3687,7 @@ affpal      endp
 affpal2      proc near
     pushad
 
-;         mov   esi,offset pal_affich‚e
+;         mov   esi,offset pal_affichâ€še
 	 mov   dx,3c8h
 	 XOR   al,al
 	 out   dx,al
@@ -3962,10 +3962,10 @@ popall
 
 pushall
 
-;------- copie les m‚dailles ---
+;------- copie les mâ€šdailles ---
 
 ;victoires dd 8 dup (?)
-;viseur pour on place la premiere m‚daille pour chacun des 8 joueurs.
+;viseur pour on place la premiere mâ€šdaille pour chacun des 8 joueurs.
 ;
 ;viseur_victory dd 44+44*320,44+86*320,44+128*320,44+170*320
 ;               dd 205+45*320,205+86*320,205+128*320,205+170*320
@@ -4046,7 +4046,7 @@ mov esi,64000*8 ;de face uniquement
 
 ;briques dw 1+19*13*2 dup (?)  ;nombre de brique, source de la brique, destination
 ;                              ;dans buffer video
-;                              ;si on est dans 'Z' m‚daille c‚remony
+;                              ;si on est dans 'Z' mâ€šdaille câ€šremony
 ;                              ;les noms de chaque joueur. 8x4 octets.
 ;
 ;                   ;+ 1 db= faut afficher la brike ki clignote ou pas???
@@ -4381,7 +4381,7 @@ handleR10 ENdP
 
 controle proc near ;utilise par les slavers et les masters
 PUSHALL
-                 ;pr‚pare le packet qu'on va transmettre en informant
+                 ;prâ€špare le packet qu'on va transmettre en informant
                  ;les touches ke l'on presse actuellement
                  ;
 
@@ -4614,7 +4614,7 @@ erertertertperterrert4t54rt5yd:
 
 ;----------------------------------------------------------------
 
-;--------- r‚cupere touches pour personnes d‚ja inscrites...
+;--------- râ€šcupere touches pour personnes dâ€šja inscrites...
 
 push ds
 pop es
@@ -4659,7 +4659,7 @@ mov byte ptr [texte1+6*2+32*3+edx],'-'
 pop edx
 retrterteoooshow:
 ;-------------------
-;regarde si on a press‚...
+;regarde si on a pressâ€š...
 dec [temps_joueur+ebx]
 cmp [temps_joueur+ebx],0
 jne ertterrtytyrrtyrtyrtyrtytuoooooooooo
@@ -4814,7 +4814,7 @@ mov ecx,32
 rep movsd
 
 
-;dans ebx... nom— du mec... cas particulier...
+;dans ebx... nomâ€” du mec... cas particulier...
 ;cmp ebx,'rmd '
 
 pushall
@@ -4856,9 +4856,9 @@ jnz ooooooooh
 
 ;name_joueur     dd 8 dup (?) ;pour dans le menu...
 ;0: pas encore inscrit.
-;1: r‚cupere la premiere lettre
-;2: r‚cupere la premiere lettre
-;3: r‚cupere la troisieme lettre
+;1: râ€šcupere la premiere lettre
+;2: râ€šcupere la premiere lettre
+;3: râ€šcupere la troisieme lettre
 ;4: finis... attend de jouer
 ;temps_joueur   dd 8 dup (temps_re_menu) ;temps d'attente avant validation
                                         ;d'une nouvelle frappe de touche.
@@ -4917,7 +4917,7 @@ pop es
 
 bruit 3 40 fx
 
-; on va marquer le numero de l'ordy connect‚...
+; on va marquer le numero de l'ordy connectâ€š...
 
 ;mov eax,esi
 ;sub eax,offset differents_offset_possible
@@ -4999,10 +4999,10 @@ mov byte ptr  [esi+06],1
 ererterter455:
 
 
-;offset 0         =1 si la fleche bas est press‚/               j1
-;       1         =1 si la fleche droite est press‚             j1
-;       2         =1 si la fleche gauche est press‚             j1
-;       3         =1 si la fleche haut est press‚2              j1
+;offset 0         =1 si la fleche bas est pressâ€š/               j1
+;       1         =1 si la fleche droite est pressâ€š             j1
+;       2         =1 si la fleche gauche est pressâ€š             j1
+;       3         =1 si la fleche haut est pressâ€š2              j1
 ;       4         =1 bouton 1                                   j1
 ;       5         =1 bouton 2                                   j1
 
@@ -5013,7 +5013,7 @@ endp
 
 
 
-gestion_jeu proc near ;uniquement appel‚ par le master.
+gestion_jeu proc near ;uniquement appelâ€š par le master.
 pushall
 
 ;;cas particulier: terrain6 plus apres lapocalypse, pas de bonus
@@ -5147,15 +5147,15 @@ call anim_un_joeur
 cmp [vie+ebp],1
 jne erertert
 Call touches_action
-call la_mort ;regarde si elle a frapp‚e. OU si on a mang‚ un BONUS...
+call la_mort ;regarde si elle a frappâ€še. OU si on a mangâ€š un BONUS...
 erertert:
 
 add ebp,4
 pop ecx
 dec ecx
 jnz brouter
-;dans ebp: viseur sur num‚ro du joeur. enfin du premier monstre
-;------ il reste les m‚chants … g‚rer ---
+;dans ebp: viseur sur numâ€šro du joeur. enfin du premier monstre
+;------ il reste les mâ€šchants â€¦ gâ€šrer ---
 cmp [nombre_de_monstres],0
 je y_en_a_pas
 
@@ -5171,7 +5171,7 @@ cmp [blocage+ebp],0
 jne ertreteretterter
 call intelligence_monstre
 ertreteretterter:
-call la_mort_monstre ;regarde si elle a frapp‚e.
+call la_mort_monstre ;regarde si elle a frappâ€še.
 next_monstre:
 mov esi,[liste_couleur+ebp] ;offset blanc ;esi: couleur du joeur...
 pushall
@@ -5183,7 +5183,7 @@ jne next_monstre2
 cmp [blocage+ebp],0
 jne next_monstre2
 
-;---- si le monstre est mont‚ sur la flamme.. on lui dit pas bonne id‚e..
+;---- si le monstre est montâ€š sur la flamme.. on lui dit pas bonne idâ€še..
 jmp anti_bomb_monstre
 nonononononononon: ;retours anti_bomb pas sur une bombe...
 ;;si pas reussit a bouger. remet anciennes touches ...
@@ -5209,12 +5209,12 @@ y_en_a_pas:
 
 call minuteur ;pour les bombes... fauit le tic tic tic :)
 
-call monsieur_bombe ;cr‚e l'affichage les bombes
+call monsieur_bombe ;crâ€še l'affichage les bombes
 call monsieur_brik
 call calc_ombres
 call phase ;draw game ??? fin machin ???
 
-cmp byte ptr [ordre2],'' ;on ne fait pas ca si on a quitt‚ le jeu...
+cmp byte ptr [ordre2],'' ;on ne fait pas ca si on a quittâ€š le jeu...
 jne reertertertertert
 call donnee_to_donnee4 ;passe de donne a donnee4
 reertertertertert:
@@ -5472,7 +5472,7 @@ jnb ertterertertertertt
 mov [avance+ebp],0 ;=0 si PAS reussit a bouger. vaut mieu pas babe..
 ;+ mouvement inverse...
 mov ebx,[touches+ebp]
-and ebx,127 ;d‚fige...
+and ebx,127 ;dâ€šfige...
 mov eax,[anti_bomb+ebx]
 mov [touches+ebp],eax
 popall
@@ -5675,7 +5675,7 @@ ertterterrtertertertt:
   jmp reertertertrte
   ertyrttyrrtytyuutyyuiyuiiyuyuityuioouiioyuuioyyuio:
   ;====================================================
-add eax,dword ptr [donnee+8*2*3+ebp] ;ou en m‚moire!!!
+add eax,dword ptr [donnee+8*2*3+ebp] ;ou en mâ€šmoire!!!
 reertertertrte:
 mov dword ptr [donnee4+ecx],eax ;source... 666 indique: ne rien afficher
 
@@ -5718,7 +5718,7 @@ jne hooooooop
 POPALL
 ret
 ;*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-la_mort: ;regarde si elle a frapp‚e. ou si on a mang‚ un bonus.
+la_mort: ;regarde si elle a frappâ€še. ou si on a mangâ€š un bonus.
 pushall
 push ebp
 xy_to_offset
@@ -5750,10 +5750,10 @@ jb ertterertertertert
 cmp byte ptr [esi],54
 jnb ertterertertertert
 
-;invinsible    dd 8 dup (?) ;invincibilit‚. nombre de vbl restant ... d‚cr‚ment‚e... 0= none...
+;invinsible    dd 8 dup (?) ;invincibilitâ€š. nombre de vbl restant ... dâ€šcrâ€šmentâ€še... 0= none...
 ;nombre_de_coups dd 8 dup (3) ;avant la mort...
 
-;r‚sistance aux coups/calcul...
+;râ€šsistance aux coups/calcul...
 
 resistance ertterertertertert 0
 
@@ -5775,7 +5775,7 @@ mov [vie+ebp],0
 
 ertterertertertert:
 
-;regarde si on a mang‚ un bonus
+;regarde si on a mangâ€š un bonus
 
 ;si on est un lapin en train de sauter on mange pas le bonus
 cmp [lapipipino+ebp],0 ;lapin ?
@@ -5800,7 +5800,7 @@ bonus_6 154
 bonus_5 193
 baaaaaaaaaaaaaaaaaaaaaaaah_paas_de_bonus:
 
-;--- regarde si un mechant nous a mang‚...
+;--- regarde si un mechant nous a mangâ€š...
 mov eax,[last_bomb+ebp]
 cmp [nombre_de_monstres],0
 je y_en_a_pas2
@@ -5813,7 +5813,7 @@ jne pas_tue
 cmp eax,[last_bomb+ebx]
 jne pas_tue
 
-;r‚sistance aux coups/calcul...
+;râ€šsistance aux coups/calcul...
 resistance pas_tue 0
 
 ;mort d'un dyna
@@ -5829,7 +5829,7 @@ y_en_a_pas2:
 popall
 ret
 
-la_mort_monstre: ;regarde si elle a frapp‚e.
+la_mort_monstre: ;regarde si elle a frappâ€še.
 pushall
 push ebp
 xy_to_offset
@@ -5844,7 +5844,7 @@ jb uertterertertertert
 cmp byte ptr [esi],54
 jnb uertterertertertert
 
-;r‚sistance aux coups/calcul...
+;râ€šsistance aux coups/calcul...
 resistance uertterertertertert -1
 
 pushall
@@ -5942,7 +5942,7 @@ okbouge_pas:
 ;------------------------- TOUCHES INVERSEES -------------------------------
 cmp [nombre_de_dyna_x4],ebp ; uniquement si on est un humain...
 jna ui
-cmp word ptr [maladie+ebp],4 ;touches invers‚e...
+cmp word ptr [maladie+ebp],4 ;touches inversâ€še...
 jne ui
 cmp [touches+ebp],8
 jne tyuo
@@ -6133,7 +6133,7 @@ next_monstre2r2:
 
 ;--------------------------------
 
-mov [avance+ebp],1 ;reussit a bouger par d‚fault. (pour monstre)
+mov [avance+ebp],1 ;reussit a bouger par dâ€šfault. (pour monstre)
 
 ertertrterteterrteert:
 push ECX
@@ -6160,7 +6160,7 @@ errteterertertrte2:
 ;---------------------------
 push ebp
 add ebp,ebp
-mov [avance+ebp],0 ;PAS reussit a bouger apres avoir ‚t‚ replac‚. (pour monstre)
+mov [avance+ebp],0 ;PAS reussit a bouger apres avoir â€štâ€š replacâ€š. (pour monstre)
 pop ebp
 errteterertertrte3:
 ;-----------------------------
@@ -6190,7 +6190,7 @@ errteterertertrte2e:
 ;---------------------------
 push ebp
 add ebp,ebp
-mov [avance+ebp],0 ;PAS reussit a bouger apres avoir ‚t‚ replac‚. (pour monstre)
+mov [avance+ebp],0 ;PAS reussit a bouger apres avoir â€štâ€š replacâ€š. (pour monstre)
 pop ebp
 errteterertertrte3e:
 ;-----------------------------
@@ -6222,7 +6222,7 @@ errteterertertrte2ey:
 ;---------------------------
 push ebp
 add ebp,ebp
-mov [avance+ebp],0 ;PAS reussit a bouger apres avoir ‚t‚ replac‚. (pour monstre)
+mov [avance+ebp],0 ;PAS reussit a bouger apres avoir â€štâ€š replacâ€š. (pour monstre)
 pop ebp
 errteterertertrte3ey:
 ;-----------------------------
@@ -6252,7 +6252,7 @@ errteterertertrte2eyt:
 ;---------------------------
 push ebp
 add ebp,ebp
-mov [avance+ebp],0 ;PAS reussit a bouger apres avoir ‚t‚ replac‚. (pour monstre)
+mov [avance+ebp],0 ;PAS reussit a bouger apres avoir â€štâ€š replacâ€š. (pour monstre)
 pop ebp
 errteterertertrte3eyt:
 ;-----------------------------
@@ -6347,7 +6347,7 @@ add ebx,ebx
 mov ax,[kel_viseur_brike_fin+ebx]
 pop ebx
 
-jmp brique_dure_rajout‚e
+jmp brique_dure_rajoutâ€še
 nonononono:
 ;----------------
 ;cmp [terrain],2 ;pas ce cas particulier avec la neige...
@@ -6383,7 +6383,7 @@ ertrtyrtytyytutyutyuuty:
 sub ax,2
 shl ax,4
 
-;------ affiche brique diff‚rentes en fonction du terrain...
+;------ affiche brique diffâ€šrentes en fonction du terrain...
 push ebx
 xor ebx,ebx
 mov bl,[terrain] ;offset_briques dw 0,0,65+116*320
@@ -6393,7 +6393,7 @@ add ax,word ptr [offset_briques+ebx]
 pop ebx
 ;-----------------
 
-brique_dure_rajout‚e:
+brique_dure_rajoutâ€še:
 inc cx
 ;add ax,320*16*2
 stosw
@@ -6551,7 +6551,7 @@ ret
 touches_action: ;--- bp: joeur en ce moment *4
 PUSHALL
 
-;-pour par k'on pose une bombe au d‚but tout de suite kan meme...
+;-pour par k'on pose une bombe au dâ€šbut tout de suite kan meme...
 cmp nombre_de_vbl_avant_le_droit_de_poser_bombe,0
 je okokokok_pas_debut
 dec nombre_de_vbl_avant_le_droit_de_poser_bombe
@@ -6749,7 +6749,7 @@ au_milieu_y
 ;jmp erterererererertert
 ;herterererererertert:
 ;mov [lapipipino3+ebp],0
-;mov [lapipipino2+ebp],0 ;pƒs de saut
+;mov [lapipipino2+ebp],0 ;pÆ’s de saut
 ;jmp treteterrterteterertteruiotyterertertterert
 ;
 ;erterererererertertYUTYUyutyuu:
@@ -6959,7 +6959,7 @@ rtytyrrtytyrtyuutyiyuuiouiopuiouiopioppiopiopp2:
 ;or  eax,eax
 ;je non_zero ;pas de force de deplacement X/Y
 ;add ebx,1 ;eax                     ;offset dans truc+addage
-;--- r‚flechis au deplacement uniquement si on est a 0 en adder...
+;--- râ€šflechis au deplacement uniquement si on est a 0 en adder...
 ;cmp word ptr [liste_bombe+ebp+4+5*4],0
 ;jne depeplacement_kan_mee
 ;cmp byte ptr [truc+ebx],0
@@ -7077,7 +7077,7 @@ ret
 phase:
 pushad
 
-;-- special... draw forc‚ ---
+;-- special... draw forcâ€š ---
 cmp word ptr bdraw666,'99'
 je dikgrhrfhgrrethghkgh
 
@@ -7114,7 +7114,7 @@ cmp dword ptr [vie+edi],1
 jne uil_est_mort
 
 ;team      dd 0,1,2,3,4,5,6,7
-cmp eax,[team+edi] ;si deja un gagnant de cette ‚quipe. on le compte pas.
+cmp eax,[team+edi] ;si deja un gagnant de cette â€šquipe. on le compte pas.
 je deja_dernier_un_gagnant_comme_ca
 inc edx ;------- nombre de gagnants
 mov eax,[team+edi] ;recup dans eax la team du gagnant...
@@ -7163,7 +7163,7 @@ zertertrtertetyrtyutyuiuiy:
 cmp byte ptr [esi],0
 je terertyrtytyrrtyrtyert
 cmp byte ptr [esi],54
-jb terertyrtytyrrtyrty ;bombe trouv‚e...
+jb terertyrtytyrrtyrty ;bombe trouvâ€še...
 terertyrtytyrrtyrtyert:
 inc esi
 dec ecx
@@ -7202,7 +7202,7 @@ pop ebx
 
 dec [attente_avant_med]
 jnz terertyrtytyrrtyrty
-;fabriquation du packet/victoires&m‚dailles
+;fabriquation du packet/victoires&mâ€šdailles
 mov [ordre2],'Z'
 
 ;-------- on donne la victoire au tout premier de cette equipe
@@ -7224,7 +7224,7 @@ mov edi,offset donnee4
 mov ecx,9
 rep movsd
 ;--- puis on copie:
-;les  4 dd: des sources du dyna de face ki a gagn‚...
+;les  4 dd: des sources du dyna de face ki a gagnâ€š...
 ;puis 1 db: le nombre de lignes k'il fait...
 ;liste_couleur dd offset blanc,
 
@@ -7251,7 +7251,7 @@ stosb
 mov ax,word ptr [donnee+8*6*2+ebx]   ;--- nombre de colones.
 stosb
 
-;--- puis copie les noms des diff‚rents joueurs...
+;--- puis copie les noms des diffâ€šrents joueurs...
 mov edi,offset briques
 xor ebx,ebx
 erertcharmant:
@@ -7283,7 +7283,7 @@ jne erertcharmant
 
 ;mov ecx,4
 ;lodsw
-;rep movsd ;des sources du dyna de face ki a gagn‚...
+;rep movsd ;des sources du dyna de face ki a gagnâ€š...
 ;stosd
 
 ;;donnee  dw 8*3 dup (?)
@@ -7859,7 +7859,7 @@ mov ax,fs
 call load_pcx
 call loader
 ;------------------------
-;(1582080+64000*6) 64000K r‚serv‚ pour sauvegarde
+;(1582080+64000*6) 64000K râ€šservâ€š pour sauvegarde
 ;
 ;
 ;------------------------
@@ -7881,29 +7881,29 @@ ret
 endp
 
 
-transmet_central proc near ; … partir du GROS packet de touches qu'on a
-                           ; r‚cup‚r‚ pour tous les ordinateur.
-                           ; on regarde … kel dyna correspond chaque partie
+transmet_central proc near ; â€¦ partir du GROS packet de touches qu'on a
+                           ; râ€šcupâ€šrâ€š pour tous les ordinateur.
+                           ; on regarde â€¦ kel dyna correspond chaque partie
                            ; packet
                            ; et on modifie les variables CENTRAL "touches"
                            ; et "action"
                            ; qui informent dans kel direction le dyna va
                            ; s'il est en mouvement  et s'il veut poser une
                            ; bombes. grace a ces variables l'intelligence du
-                           ; master d‚terminera les packets finaux a envoyer
-                           ; ou diff‚rents slaves... (enfin … l'affichage koi)
+                           ; master dâ€šterminera les packets finaux a envoyer
+                           ; ou diffâ€šrents slaves... (enfin â€¦ l'affichage koi)
 pushall
 ;*************** transmet au central...
 
 mov ecx,[nombre_de_dyna] ;   dd 2 ;en tout.. pour le master
 xor ebp,ebp
 rterteterrterteertert:
-mov ebx,[control_joueur+ebp] ;r‚cupere l'offet du packet en question.
+mov ebx,[control_joueur+ebp] ;râ€šcupere l'offet du packet en question.
 
 ;controle joueur special play
 cmp action_replay,2
 jne pas_recertterteretrreertyutyyut
-mov ebx,[control_joueur2+ebp] ;r‚cupere l'offet du packet en question.
+mov ebx,[control_joueur2+ebp] ;râ€šcupere l'offet du packet en question.
 ;mov ebx,-64
 pas_recertterteretrreertyutyyut:
 ;=================
@@ -7912,30 +7912,30 @@ lea esi,[total_t+ebx]
 
 
 
-;entr‚e. ebp ;num‚ro CENTRAL d'un joeur.
+;entrâ€še. ebp ;numâ€šro CENTRAL d'un joeur.
 
 ;mov esi,offset total_t ;packet
 
 ;call packet_to_central ;modifie les valeurs du central a partir des
 ;                       ;deplacement d'un dyna.
-;packet_to_central proc near ;num‚ro du dyna * 4
+;packet_to_central proc near ;numâ€šro du dyna * 4
 
 PUSHALL
 
-;model des packets recus par le master.. (envoy‚ par slave.)
+;model des packets recus par le master.. (envoyâ€š par slave.)
 ;donnee2 dd 0,0,0,0     ,0,0   ;1er joeur d'un ordy.
 ;        dd 0,0,0,0     ,0,0   ;2eme joeur d'un ordy
 ;        dd 0,0,0,0     ,0,0   ;3eme joeur d'un ordy
 ;        dd 0,0,0,0     ,0,0   ;4eme joeur d'un ordy
 ;
-;;offset 0         =1 si la fleche bas est press‚/               j1
-;;       4         =1 si la fleche droite est press‚             j1
-;;       8         =1 si la fleche gauche est press‚             j1
-;;       12        =1 si la fleche haut est press‚2              j1
+;;offset 0         =1 si la fleche bas est pressâ€š/               j1
+;;       4         =1 si la fleche droite est pressâ€š             j1
+;;       8         =1 si la fleche gauche est pressâ€š             j1
+;;       12        =1 si la fleche haut est pressâ€š2              j1
 ;;       16        =1 bouton 1                                   j1
 ;;       20        =1 bouton 2                                   j1
 
-xor ax,ax ;indique k'on a trouv‚ aucune touche...
+xor ax,ax ;indique k'on a trouvâ€š aucune touche...
 
 mov dword ptr [ACTION+ebp],0 ;touches action a 0
 
@@ -8030,9 +8030,9 @@ endp
 ;pushall
 ;
 ;;1er mot 0=existe pas: 1 existe !!!
-;;2eme mot: num‚ro de l'ordinateur !!!
+;;2eme mot: numâ€šro de l'ordinateur !!!
 ;;        0= local.
-;;3eme mot: num‚ro interne (0 a 3) pour chaque ordinateur.
+;;3eme mot: numâ€šro interne (0 a 3) pour chaque ordinateur.
 ;;liste_des_joeurs dd 1,0,0
 ;;                 dd 0,0,0
 ;
@@ -8049,18 +8049,18 @@ endp
 ;
 ;
 ;cmp dword ptr [esi+4],0 ;regarde si le joueur en question est en local. sinon il faut
-;              ;r‚cup‚rer l'info par communication avec l'ordinateur.
+;              ;râ€šcupâ€šrer l'info par communication avec l'ordinateur.
 ;je cest_en_local
 ;
-;cmp dword ptr [esi+8],0 ;regarde si on aurait pas deja r‚cup‚r‚ le packet..
+;cmp dword ptr [esi+8],0 ;regarde si on aurait pas deja râ€šcupâ€šrâ€š le packet..
 ;                        ;(vrai si offset dans le packet <> 0...)
 ;jne cest_en_local ;deja fait...
 ;
-;;communication. (si le packet n'est pas deja charg‚...)
+;;communication. (si le packet n'est pas deja chargâ€š...)
 ;;**************************************************************************
 ;ytytytytttttttttttttttttttttt:
 ;PUSHALL
-;mov esi,[esi+4] ;offset liste_adresse ;r‚cupere l'adresse de l'ordy ou on envois... ;offset adresse
+;mov esi,[esi+4] ;offset liste_adresse ;râ€šcupere l'adresse de l'ordy ou on envois... ;offset adresse
 ;mov ebp,offset packed_data ;donnee
 ;;call envois
 ;;envois special bloc total...
@@ -8115,10 +8115,10 @@ endp
 ;cest_en_local:
 ;
 ;push esi
-;mov esi,[esi+8] ;r‚cupere l'offet du packet en question.
+;mov esi,[esi+8] ;râ€šcupere l'offet du packet en question.
 ;add esi,offset donnee2 ;packet
 ;
-;;entr‚e. ebp ;num‚ro CENTRAL d'un joeur.
+;;entrâ€še. ebp ;numâ€šro CENTRAL d'un joeur.
 ;
 ;call packet_to_central ;modifie les valeurs du central a partir des
 ;                       ;deplacement d'un dyna.
@@ -8590,7 +8590,7 @@ mov ecx,8 ;nb_dyna
 lea edi,touches_save
 rep stosd
 
-;-------------------------------------------- donn‚es ...
+;-------------------------------------------- donnâ€šes ...
 mov edi,offset donnee
 
 xor ebx,ebx
@@ -8746,7 +8746,7 @@ dec ecx
 jnz monstro4
 centralol:
 
-;-- transforme les monstres par d‚faux en dynas ...
+;-- transforme les monstres par dâ€šfaux en dynas ...
 mov esi,offset s_normal
 lea edi,donnee+8*6
 mov ecx,[nombre_de_dyna]
@@ -8868,7 +8868,7 @@ mov ecx,1+247*(taille_dune_info_bombe/4)
 rep stosd
 
 ;touches dd nb_dyna dup (0)
-;action, touches d'action appuy‚s pour chacun des joeurs...
+;action, touches d'action appuyâ€šs pour chacun des joeurs...
 ;
 ;ACTION dw nb_dyna dup (0,0)
 
@@ -9020,7 +9020,7 @@ pas_rec:
 
 pas_action:
 ;------------------------------
-;(1582080+64000*6) 64000K r‚serv‚ pour sauvegarde
+;(1582080+64000*6) 64000K râ€šservâ€š pour sauvegarde
 
 popall
 ret
@@ -9105,7 +9105,7 @@ pas_rec3:
 
 
 ;***********************************************
-;         PLAY !!!  Û>
+;         PLAY !!!  Ã›>
 ;***** ...
 cmp action_replay,2
 jne pas_rec4
@@ -9401,12 +9401,12 @@ mov [affiche_pal],1
 erterertyyuuutyutyutyutyutyutyutyuty:
 cmp [pic_time],17         ;RE quitte pas pendant k'on efface la palette
 jb erttertertertertert
-cmp [pic_time],pic_max-34 ;quitte pas avant k'on ait la pallette affich‚
+cmp [pic_time],pic_max-34 ;quitte pas avant k'on ait la pallette affichâ€š
 ja erttertertertertert    ;
 ;cmp [last_sucker],0 ;derniere touche...
 ;je erttertertertertert
 touche_presse pic_time 17
-;mov [pic_time],17    ;acc‚lere le processus...
+;mov [pic_time],17    ;accâ€šlere le processus...
 erttertertertertert:
 
 ;cmp [assez_de_memoire],1
@@ -9518,7 +9518,7 @@ call aff_page2 ;affiche en ram video ce k'il y a a dans le buffer
 popall
 ret
 erettererttrtyrtyyrtrty:
-;pas assez de m‚moire...
+;pas assez de mâ€šmoire...
 popall
 ret
 
@@ -9530,7 +9530,7 @@ push ebx
 
 ;couleur db 62,3,224,28,65,160,28,3
 mov ebx,es:[viseur_couleur] ;db 0
-cmp es:[ordre2],'Z'                    ; m‚daille distribution
+cmp es:[ordre2],'Z'                    ; mâ€šdaille distribution
 jne rertetyutyuyuttuyyuttyu
 mov bl,es:[couleur+ebx]
 jmp rtyutyuyuttyutyuyutyutyut
@@ -9663,7 +9663,7 @@ trtyrtrtyrtyrtyrtyrtytyrrtyrtytyryrtrty2R:
 
 add ebx,[tecte2]
 inc [tecte2]
-;tecte    db 'abcedfghijklmnopq remdy is back Û'
+;tecte    db 'abcedfghijklmnopq remdy is back Ã›'
 ;tecte2   dd 0
 
 
@@ -9682,7 +9682,7 @@ dtrerteertertertertertrteertertretrererterterte:
 
 
 mov al,byte ptr [ebx]
-cmp al,'Û'
+cmp al,'Ã›'
 jne dtrerteertertertertertrteertertretrerertertert
 ;mov [tecte2],0
 lea edx,tected
@@ -10212,7 +10212,7 @@ reertterertrtetrertrteertert:
 ;mov esi,offset grosbleu
 ;si ordre2=''
 ; 8x source DD, destination dw pour chaque dyna..., db: nombre de ligne du dyna
-; (serra tri‚ … l'affichage par chaque machine.mettra dest a ffffh)
+; (serra triâ€š â€¦ l'affichage par chaque machine.mettra dest a ffffh)
 ;
 ;       dd 512000,512000,512000,512000,512000,512000,512000,512000 ;source bloque memoire
 ;       dw 32,32,32,32,32,32,32,32 ;nombre de lignes pour un dyna...
@@ -10399,7 +10399,7 @@ pushall
 ;mov bdraw666,'03'
 ;mov bdraw1,60
 
-;cas particulier... on est entr‚ en phase 1 seul dyna vivant...
+;cas particulier... on est entrâ€š en phase 1 seul dyna vivant...
 ;on doit donc arreter le compte a rebourd...
 
 cmp [attente_avant_med],attente_avant_med2
@@ -10452,7 +10452,7 @@ and ax,0011111111111111B
 cmp ax,000010001B
 ja nonononoiuioiohjrr
 special_fete:
-or  temps,01000000000000000B ;clinotement g‚n‚ral.
+or  temps,01000000000000000B ;clinotement gâ€šnâ€šral.
 nonononoiuioiohjrr:
 
 cmp temps2,1
@@ -10479,7 +10479,7 @@ ertrtytyuyuiiyuughfdfgdfgfgdrtyrtyrtyerertertert:
 
 
 ;test dword ptr [changement],0000000000001B
-;jnz finto_pasŠ_cetelmk
+;jnz finto_pasÅ _cetelmk
 
 ;133: virrer la brique. pour le milieu...
 
@@ -10559,10 +10559,10 @@ inc edi
 inc esi
 dec ecx
 jnz nextooi
-finto_pasŠ_cetelmk:
+finto_pasÅ _cetelmk:
 popall
 ret
-;*--*-*-*-*-*-*-*-* d‚cr‚mentation du compte  rebour.
+;*--*-*-*-*-*-*-*-* dâ€šcrâ€šmentation du compte  rebour.
 ertterrtyrtyrtyyrt:
 
 mov temps2,59
@@ -10797,7 +10797,7 @@ mwaiwmaietrertin:
 
 ;max_lost dd 10 ;100         ; 15 ;connection lost max attente.... pour slave
 ;max_lost_master dd 4 ;20  ;2 ;connection lost max attente.... pour le master
-;max_lost_master2 dd 8 ;80 ;5 ;attente accus‚ de reception...
+;max_lost_master2 dd 8 ;80 ;5 ;attente accusâ€š de reception...
 
 
   cmp word ptr es:[ebx],'T-'
@@ -11270,7 +11270,7 @@ mov ecx,512
 lea edx,loaded_f
 int 21h
 jc eooooooooookyu
-;---------- v‚rifie l'int‚grit‚ du fichier config ---
+;---------- vâ€šrifie l'intâ€šgritâ€š du fichier config ---
 lea esi,loaded_f
 mov cx,511
 xor bl,bl
@@ -11289,7 +11289,7 @@ rep movsd
 lodsd
 mov setup_viseur2,eax ;et pour le choix de force de la carte son
 
-;---------- affiche le fichier ki a ‚t‚ utilis‚.
+;---------- affiche le fichier ki a â€štâ€š utilisâ€š.
 lea edx,okcfg
 cmp [adder_speciale_cfg_path],3
 jne tyutyutyutyutyu
@@ -11299,8 +11299,8 @@ mov ah,9
 int 21h
 
 jmp heypiiiiiiiiiiiiiiiiiiiiiiiiiiii
-eooooooooookyu:;pas trouv‚ de fichier cfg (ou erreur dedans)
-cmp _setup_,1 ;affiche pas de message d'erreur si on a lanc‚ l'option :)
+eooooooooookyu:;pas trouvâ€š de fichier cfg (ou erreur dedans)
+cmp _setup_,1 ;affiche pas de message d'erreur si on a lancâ€š l'option :)
 je heypiiiiiiiiiiiiiiiiiiiiiiiiiiii
 
 lea edx,cfgerror
@@ -12193,7 +12193,7 @@ lea esi,truc
 ; 2: dur cassable
 ; 3,4,5,6,7,8,9,10 piece en destruction (mettre 3 pour la detruire...)
         ;bombes !!!!
-;11: piece dure pour la fin du jeu. tomb‚e quoi...
+;11: piece dure pour la fin du jeu. tombâ€še quoi...
 mov dx,13
 ijhrere:
 mov cx,19
@@ -12393,9 +12393,9 @@ add ebx,taille_dune_info_bombe
 jmp yttyrrtyrtyrtyrtytyrrtyrtyyrtrty
 yerertertrteterert:
 
-;mov edx,3 ;dword ptr [edi+4]        ;r‚cupere la puissance de la bombe dans
+;mov edx,3 ;dword ptr [edi+4]        ;râ€šcupere la puissance de la bombe dans
                                  ;l'info du joueur...
-;mov ecx,256 ;dword ptr [edi+8]        ;r‚cupere la taille de la meiche de la
+;mov ecx,256 ;dword ptr [edi+8]        ;râ€šcupere la taille de la meiche de la
                                  ;bombe dans l'info du joueur...
 
 ;------------------------------------ mouvement de la bombe
