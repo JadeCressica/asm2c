@@ -34,4 +34,4 @@ build_script:
       # cp .build/debug/asm2c Resources
       # cd Resources
       # ../.build/debug/asm2c p.asm .
-      .build/debug/asm2c asmTests/addsub.asm Resources
+      .build/debug/asm2c asmTests/addsub.asm ./Resources
