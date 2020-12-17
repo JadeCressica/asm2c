@@ -50,7 +50,7 @@ local nononono_onest_en_recordplay
 mov byte ptr [esi],1
 
 ;utilise Esi par rapport a truc2 pour gauche/droite.
-bruit2 11 34 BLOW_WHAT2 ;bruit de kan on pose une bombe
+bruit2 11 34 ;BLOW_WHAT2 ;bruit de kan on pose une bombe
 
 ;"hazard" pour ke les bombes soit pas toutes pareille lors du tri bombe
 push eax
@@ -831,7 +831,7 @@ ENDM
 
 
 
-bruit2 MACRO a,b,t
+bruit2 MACRO a,b
 local op
 
 ;a: sample, b:note
@@ -6608,7 +6608,7 @@ jmp treteterrterteterertter
 ttrrttreteterrterteterertter:
 
 ;utilise Esi par rapport a truc2 pour gauche/droite.
-bruit2 9 34 BLOW_WHAT2 ;bruit du bonus tri bombe.
+bruit2 9 34 ;BLOW_WHAT2 ;bruit du bonus tri bombe.
 
 ;2eme generation
 ;sortie: ebx entree ebp...
